@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teman Dekat - Lectzz</title>
+    <link rel="Shortcut Icon" href="https://o.remove.bg/downloads/49ba74f1-c92c-468e-86a7-9c4556a8333e/Sonic-removebg-preview.png">
+    <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+
+        .container {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+
+
+        /* Fonts */
+        @font-face {
+            font-family: oswald;
+            src: url(../../assets/Fonts/Oswald-Regular.ttf);
+        }
+        @font-face {
+            font-family: condensed;
+            src: url(../../assets/Fonts/RobotoCondensed-Regular.ttf);
+        }
+        @font-face {
+            font-family: rubikdirt;
+            src: url(../../assets/Fonts/RubikDirt-Regular.ttf);
+        }
+        @font-face {
+            font-family: slab;
+            src: url(../../assets/Fonts/RobotoSlab-Regular.ttf);
+        }
+        /* Fonts */
+
+
+        /* Header */
+        .header {
+            background-color: #eee;
+            min-height: 50px;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+        .logo img {
+            width: 200px;
+        }
+        .menu ul {
+            padding: 0;
+        }
+        .menu ul li {
+            display: inline-block;
+        }
+        .menu ul li a {
+            color: rgb(180, 5, 5);
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+        .menu ul li a:hover {
+            color: rgb(10, 12, 175);
+            background-color: rgb(240, 174, 174);
+            border-radius: 5px;
+        }
+        .active {
+            color: rgb(10, 12, 175);
+            background-color: rgb(240, 174, 174);
+            border-radius: 5px;
+        }
+        ul.submenu {
+            background-color: #eee;
+            border: 1px solid #ccc;
+            text-align: left;
+            position: absolute;
+            top: 20px;
+            left: 0;
+            display: none;
+        }
+        .menu ul li:hover ul.submenu  {
+            display: block;
+        }
+        ul.submenu li {
+            display: block;
+            }
+        ul.submenu li a {
+            display: block;
+            padding: 5px 10px;
+        }
+        .menu ul li {
+            display: inline-block;
+            position: relative;
+        }
+        /* Header */
+
+
+        /* Jumbotron */
+        .jumbotron {
+            z-index: -5;    
+            font-family: condensed;
+            width: 100%;
+            padding: 80px 40px;
+            box-sizing: border-box;
+            text-align: center;
+            color: white;
+            background-color: #aaa;
+            background-image: url(https://ak.picdn.net/shutterstock/videos/8276470/thumb/1.jpg);
+            background-size: cover;
+            position: relative;
+        }
+        .jumbotron h2 {
+            font-size: 35px;
+            color: rgb(252, 182, 182);
+        }
+        .jumbotron h2,.jumbotron p {
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0.4;
+            }
+        /* Jumbotron */
+
+
+        /* Content */
+        .content {
+            background-color: #ddd;
+            min-height: 500px;
+            overflow: auto;
+            padding-bottom: 50px;
+        }
+        .thumbnail {
+            border: 5px solid #fff;
+            border-radius: 50px;
+            box-shadow: 8px 8px 10px 0px rgb(0, 0, 0);
+            background-color: rgb(94, 3, 3);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 195px;
+            height: 300px;
+            margin: 10px;
+            float: left;
+        }
+        .thumbnail img {
+            margin-left: -3px;
+            border: 5px solid rgb(27, 0, 0);
+            border-radius: 200px;
+            width: 100%;
+        }
+        .thumbnail h2 {
+            margin-bottom: 15px;
+            font-size: 25px;
+            font-family: oswald;
+        }
+        .thumbnail p {
+            font-size: 14px;
+            margin-top: -10px;
+            font-family: slab;
+        }
+        /* Content */
+
+
+        /* Footer */
+        footer {
+            padding-top: 30px;
+            position: relative;
+            width: 100%;
+            background: #ccc;
+            min-height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        footer .social_icon,
+        footer .menu
+        {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 10px 0;
+            flex-wrap: wrap;
+        }
+        footer .social_icon li,
+        footer .menu li
+        {
+            list-style: none;
+        }
+        footer .social_icon li a
+        {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(133, 2, 2, 0.2);
+            font-size: 25px;
+            color: rgb(241, 9, 9);
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            transition: 0.5s;
+        }
+        footer .social_icon li a:hover {
+            color: #24262b;
+            background-color: #fff;
+        }
+        footer .menu li a
+        {
+            font-size: 1.2em;
+            color: rgb(53, 50, 50);
+            margin: 0 10px;
+            display: inline-block;
+            text-decoration: none;
+            opacity: 0.75;
+        }
+        footer.menu li a:hover {
+            opacity: 1;
+        }
+        footer p {
+            color: #fff;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            margin-left: 25px;
+        }
+        /* Footer */
+
+    </style>
+</head>
+<body>
+    <div class="container">   <!-- Div utama kita namai dengan di class container -->
+
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <img src="../../assets/img/Nickelodeon Logo.png">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a class="active" href="#">Info Lengkap</a>
+                        <ul class="submenu">
+                            <li><a href="keahlian.html">Keahlian</a></li>
+                            <li><a class="active" href="teman dekat.html">Teman Dekat</a></li>
+                            <li><a href="../../assets/img/Portfolio.pdf" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Header -->
+
+
+        <!-- Content -->
+        <div class="content">
+            <h2 style="text-align: center; font-family : oswald; font-size: 35px;">Teman Dekat</h2>
+            <div class="thumbnail">
+                <img src="../../assets/img/Nabil.jpg">
+                <h2>Nabil</h2>
+                <p>Noob gabisa glory <br>Jokesnya Lucu dan Original</p>
+            </div>
+            <div class="thumbnail">
+                <img src="../../assets/img/Farrel.jpg">
+                <h2>Farrel</h2>
+                <p>Lagi di fase suka main Genshin Impact</p>
+            </div>
+            <div class="thumbnail">
+                <img src="https://mirza-pesatir-handal.netlify.app/asset/image/ceo%20meme.jpg">
+                <h2>Mirza</h2>
+                <p>Gak tau, Intinya <br> ban Franco(Tank)</p>
+            </div>
+        </div>
+        <!-- Content -->
+
+
+        <!-- Footer -->
+        <div class="container">
+            <footer>
+                <div class="waves">
+                  <div class="wave" id="wave1"></div>
+                  <div class="wave" id="wave2"></div>
+                  <div class="wave" id="wave3"></div>
+                  <div class="wave" id="wave4"></div>
+                </div>
+                <ul class="social_icon">
+                  <li><a href="http://instagram.com/octvyn_0410"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                  <li><a href="https://www.youtube.com/channel/UCCvZDlE6a5ueVh_t174X_Bw"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                  <li><a href="http://www.facebook.com/octavyan.r"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                  <li><a href="https://www.tiktok.com/@lectzzzzzz"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+                  <li><a href="https://twitter.com/lectzz?t=muh6htRhRy4j1dMm9upl-Q&s=08"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                </ul>
+                <ul class="menu">|
+                  <li><a href="../../index.html">Home</a></li>|
+                  <li><a href="../about.html">About</a></li>|
+                  <li><a href="keahlian.html">Keahlian</a></li>|
+                  <li><a href="https://www.investopedia.com/terms/c/customer-service.asp">Costumer Services</a></li>|
+                  <li><a href="../contact.html">Contact</a></li>|
+                </ul>
+                <p style="color: rgb(95, 90, 90);">&copy;2022 Created And Designed | Lectzz Kanaeru</p>
+              </footer>
+        </div>
+        <!-- Footer -->
+    
+    </div>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
